@@ -1,0 +1,107 @@
+/* Admin Dashboard Styles */
+body.admin-dashboard {
+    background-color: #faf8f4;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background:linear-gradient(180deg,#0a3d30,#0f5a46);
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #adb5bd;
+    padding: 0.75rem 1rem;
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: rgba(255,255,255,.1);
+}
+
+.sidebar .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,.1);
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: #adb5bd;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.dashboard-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* DataTables customization */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    padding: 10px;
+}
+
+/* Form styles */
+.admin-form .form-control {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.admin-form .form-label {
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Status badges */
+.badge-admin {
+    background-color: #6610f2;
+}
+
+.badge-manager {
+    background-color: #fd7e14;
+}
+
+.badge-staff {
+    background-color: #20c997;
+}
+
+.badge-customer {
+    background-color: #6c757d;
+}

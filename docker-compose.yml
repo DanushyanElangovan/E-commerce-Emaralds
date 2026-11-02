@@ -1,0 +1,14 @@
+services:
+  web:
+    image: php:8.2-apache
+    ports: ["8080:80"]
+    volumes: ["./ecommerce:/var/www/html/ecommerce"]
+    environment: { DB_HOST: db }
+    command: bash -c "docker-php-ext-install pdo_mysql >/dev/null && apache2-foreground"
+    depends_on: [db]
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: "1"
+      MARIADB_DATABASE: ecommerce_db
+    volumes: ["./ecommerce/if0_38952671_ecommerce.sql:/docker-entrypoint-initdb.d/init.sql"]
